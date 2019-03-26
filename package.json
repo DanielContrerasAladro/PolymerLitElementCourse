@@ -1,0 +1,21 @@
+{
+  "name": "polymer-todo",
+  "main": "polymer-todo.js",
+  "dependencies": {
+    "@polymer/lit-element": "^0.7.1",
+    "@polymer/polymer": "^3.0.0",
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-mocha": "^1.0.0"
+  },
+  "scripts": {
+    "start": "concurrently 'npm run serve' 'npm run watch'",
+    "serve": "polymer serve --port 8082 --npm",
+    "watch": "browser-sync start --proxy localhost:8082 --open \"src/components\" --files \"**/*.js\""
+  }
+}
